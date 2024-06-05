@@ -2,5 +2,6 @@ cmake_minimum_required(VERSION 3.28)
 project(HammingDistance)
 
 set(CMAKE_CXX_STANDARD 26)
-
-add_executable(HammingDistance main.cpp)
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libstdc++ -static-libgcc -static")
+set(SOURCE_FILES main.cpp)
+add_executable(HammingDistance ${SOURCE_FILES})
